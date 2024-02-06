@@ -805,6 +805,13 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "190cce84-f937-4fcc-a579-353ef31011fe",
+            "title": "Discount timer",
+            "icon": "sicon-alarm-check",
+            "path": "Discount-timer",
+            "fields": []
         }
     ],
     "support_url": "",
