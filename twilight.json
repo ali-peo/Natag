@@ -808,9 +808,9 @@
         },
         {
             "key": "190cce84-f937-4fcc-a579-353ef31011fe",
-            "title": "Discount timer",
+            "title": "مؤقت التخفيضات",
             "icon": "sicon-alarm-check",
-            "path": "Discount-timer",
+            "path": "home.Discount-timer",
             "fields": []
         }
     ],
