@@ -819,6 +819,13 @@
             "icon": "sicon-brush",
             "path": "home.landing-page",
             "fields": []
+        },
+        {
+            "key": "b243a888-cc2c-488a-8b03-4d443fe280c6",
+            "title": "صورة مع نص",
+            "icon": "sicon-pages",
+            "path": "home.image-text",
+            "fields": []
         }
     ],
     "support_url": "",
