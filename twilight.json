@@ -811,7 +811,30 @@
             "title": "مؤقت التخفيضات",
             "icon": "sicon-alarm-check",
             "path": "home.Discount-timer",
-            "fields": []
+            "fields": [
+                {
+                    "id": "title",
+                    "type": "static",
+                    "format": "title",
+                    "label": "Title",
+                    "value": "time Dowen",
+                    "variant": "h1",
+                    "icon": "sicon-format-text"
+                },
+                {
+                    "id": "time",
+                    "type": "string",
+                    "format": "time",
+                    "inputType": "time",
+                    "label": "Time",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-time",
+                    "value": "00:00",
+                    "required": false,
+                    "public": true
+                }
+            ]
         },
         {
             "key": "e41a1f09-a827-406f-9f56-9de1d43562c3",
