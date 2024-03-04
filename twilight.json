@@ -850,6 +850,15 @@
             "path": "home.image-text",
             "fields": [
                 {
+                    "id": "title",
+                    "type": "static",
+                    "format": "title",
+                    "label": "Title",
+                    "value": null,
+                    "variant": "h4",
+                    "icon": "sicon-format-text"
+                },
+                {
                     "id": "image_with_text",
                     "type": "string",
                     "format": "image",
@@ -860,15 +869,6 @@
                     "icon": "sicon-image",
                     "value": null,
                     "required": true
-                },
-                {
-                    "id": "description_with_img",
-                    "type": "static",
-                    "format": "description",
-                    "label": "Description",
-                    "value": null,
-                    "variant": "h1",
-                    "icon": "sicon-format-size"
                 }
             ]
         }
