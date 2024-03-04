@@ -850,13 +850,19 @@
             "path": "home.image-text",
             "fields": [
                 {
-                    "id": "title",
-                    "type": "static",
-                    "format": "title",
-                    "label": "Title",
+                    "id": "string",
+                    "type": "string",
+                    "format": "text",
+                    "label": "String",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
                     "value": null,
-                    "variant": "h4",
-                    "icon": "sicon-format-text"
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
                 },
                 {
                     "id": "image_with_text",
