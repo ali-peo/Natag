@@ -850,21 +850,6 @@
             "path": "home.image-text",
             "fields": [
                 {
-                    "id": "string",
-                    "type": "string",
-                    "format": "text",
-                    "label": "String",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "Placeholder text ..",
-                    "icon": "sicon-format-text-alt",
-                    "value": null,
-                    "multilanguage": false,
-                    "required": false,
-                    "minLength": 6,
-                    "maxLength": 30
-                },
-                {
                     "id": "image_with_text",
                     "type": "string",
                     "format": "image",
@@ -875,6 +860,21 @@
                     "icon": "sicon-image",
                     "value": null,
                     "required": true
+                },
+                {
+                    "id": "string_with_image",
+                    "type": "string",
+                    "format": "text",
+                    "label": "String",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "image_1",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": "1",
+                    "maxLength": 30
                 }
             ]
         }
