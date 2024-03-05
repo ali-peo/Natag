@@ -850,30 +850,45 @@
             "fields": [
                 {
                     "id": "image_with_text",
-                    "type": "string",
-                    "format": "image",
-                    "label": "Image",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "image_with_text",
                     "description": null,
                     "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": null,
-                    "required": true
-                },
-                {
-                    "id": "string_with_image",
-                    "type": "string",
-                    "format": "text",
-                    "label": "String",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "image_1",
-                    "icon": "sicon-format-text-alt",
-                    "value": null,
-                    "multilanguage": false,
-                    "required": false,
-                    "minLength": "1",
-                    "maxLength": 30
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "image_with_text.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "Image",
+                            "description": "image size is square.",
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": true
+                        },
+                        {
+                            "id": "image_with_text.description_image",
+                            "type": "string",
+                            "format": "textarea",
+                            "label": "Description image",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Your text here",
+                            "icon": "sicon-typography",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": true,
+                            "minLength": "3",
+                            "maxLength": 255
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": 5
                 }
             ]
         }
