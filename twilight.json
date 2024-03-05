@@ -817,22 +817,21 @@
                     "type": "static",
                     "format": "title",
                     "label": "Title",
-                    "value": "time Dowen",
+                    "value": null,
                     "variant": "h1",
                     "icon": "sicon-format-text"
                 },
                 {
-                    "id": "time",
+                    "id": "date_time",
                     "type": "string",
-                    "format": "time",
-                    "inputType": "time",
-                    "label": "Time",
+                    "format": "datetime",
+                    "inputType": "datetime-local",
+                    "label": "Date Time",
                     "description": null,
                     "labelHTML": null,
-                    "icon": "sicon-time",
-                    "value": "00:00",
-                    "required": false,
-                    "public": true
+                    "icon": "sicon-calendar-time",
+                    "value": "2021-10-01T15:23",
+                    "required": false
                 }
             ]
         },
