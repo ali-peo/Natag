@@ -891,6 +891,13 @@
                     "maxLength": 5
                 }
             ]
+        },
+        {
+            "key": "b9e48bd7-3aa9-4bbf-9947-030ad37beacb",
+            "title": "imagba",
+            "icon": "sicon-store",
+            "path": "home.imageba",
+            "fields": []
         }
     ],
     "support_url": "",
