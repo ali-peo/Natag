@@ -897,7 +897,53 @@
             "title": "imagba",
             "icon": "sicon-store",
             "path": "home.imageba",
-            "fields": []
+            "fields": [
+                {
+                    "id": "banner_last",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "banner_last",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "banner_last.title_image",
+                            "type": "static",
+                            "format": "title",
+                            "label": "Title_image",
+                            "value": null,
+                            "variant": "h1",
+                            "icon": "sicon-format-text"
+                        },
+                        {
+                            "id": "banner_last.description_image",
+                            "type": "static",
+                            "format": "description",
+                            "label": "Description_image",
+                            "value": null,
+                            "variant": "h1",
+                            "icon": "sicon-format-size"
+                        },
+                        {
+                            "id": "banner_last.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "Image",
+                            "description": "image size  is 200X300",
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": 5
+                }
+            ]
         }
     ],
     "support_url": "",
