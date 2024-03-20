@@ -1,1 +1,19 @@
-<h1>hello</h1>
+<section class="s-block s-block--defult-home-slider s-block--full-bg">
+<salla-slider auto-play pagination type="fullwidth">
+<div slot="items">
+{%for banner in componet.banner_last %}
+<div class="bg-no-repeat bg-cover" style="background-color: coral; background-image:Url('{{slider.image}}');">
+    <div class="container flex text-center item-center justfy-content sm:justify-start tr:sm:justify-end px-8 py-16 lg:px-20 home-slider__content relative h-full">
+
+    <h3 class="" data-swiper-parallax="-300">
+{{banner.title_image}}
+</h3>
+    <p data-swiper-parallax="-700">
+    {{banner.description_image}}
+</p>
+    </div>
+</div>
+{%endfor%}
+</div>
+</salla-slider>
+</section>
