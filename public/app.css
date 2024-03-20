@@ -6654,6 +6654,8 @@ button.swiper-pagination-bullet {
 .ltr\:pr-5:where([dir="ltr"], [dir="ltr"] *){padding-right:1.25rem}
 .ltr\:pr-px:where([dir="ltr"], [dir="ltr"] *){padding-right:1px}
 .ltr\:even\:border-l:nth-child(even):where([dir="ltr"], [dir="ltr"] *){border-left-width:1px}
+@media (min-width: 640px){
+.ltr\:sm\:justify-end:where([dir="ltr"], [dir="ltr"] *){justify-content:flex-end}}
 @media (min-width: 768px){
 .ltr\:md\:pl-16:where([dir="ltr"], [dir="ltr"] *){padding-left:4rem}
 .ltr\:md\:pr-10:where([dir="ltr"], [dir="ltr"] *){padding-right:2.5rem}
