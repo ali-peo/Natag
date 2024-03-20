@@ -910,21 +910,33 @@
                     "fields": [
                         {
                             "id": "banner_last.title_image",
-                            "type": "static",
-                            "format": "title",
+                            "type": "string",
+                            "format": "text",
                             "label": "Title_image",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Placeholder text ..",
+                            "icon": "sicon-format-text-alt",
                             "value": null,
-                            "variant": "h1",
-                            "icon": "sicon-format-text"
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
                         },
                         {
                             "id": "banner_last.description_image",
-                            "type": "static",
-                            "format": "description",
+                            "type": "string",
+                            "format": "text",
                             "label": "Description_image",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Placeholder text ..",
+                            "icon": "sicon-format-text-alt",
                             "value": null,
-                            "variant": "h1",
-                            "icon": "sicon-format-size"
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": "1",
+                            "maxLength": 30
                         },
                         {
                             "id": "banner_last.image",
@@ -941,7 +953,7 @@
                     ],
                     "value": [],
                     "minLength": 1,
-                    "maxLength": 5
+                    "maxLength": "1"
                 }
             ]
         }
