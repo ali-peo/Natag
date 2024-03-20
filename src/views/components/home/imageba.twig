@@ -1,23 +1,24 @@
 <section class="s-block s-block--defult-home-slider s-block--full-bg">
-<salla-slider auto-play pagination type="fullwidth">
+<salla-photos  type="">
 <div slot="items">
 {% for banner in component.banner_last %}
-<div class="bg-no-repeat bg-cover swiper-lazy-wrap" style="background-color:black;
-background-image:Url('{{slide.image}}');">
-    <div class="container flex text-center item-center
+<div class="bg-no-repeat bg-cover swiper-lazy-wrap rounded" style="background-color:black;
+background-image:Url('{{banner.image}}');">
+    <div class="container text-center item-center
      justfy-content sm:justify-start ltr:sm:justify-end px-8 py-16
-      lg:px-20 home-slider__content relative h-full">
+      lg:px-20 home-slider_content relative h-full">
 
-    <h3 class="" data-swiper-parallax="-300">
+ <salla-select color="primary" size="large">   <h3 class="" >
 {{banner.title_image}}
 </h3>
-    <p data-swiper-parallax="-700">
+</salla-select>
+    <p>
     {{banner.description_image}}
 </p>
     </div>
 </div>
 {% endfor %}
 </div>
-</salla-slider>
+</salla-photos>
 </section>
 
