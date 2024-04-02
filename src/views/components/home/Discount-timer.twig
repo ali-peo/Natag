@@ -1,0 +1,67 @@
+{# count_time.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salla Time Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="timer-container">
+    <h2>Time Counter</h2>
+    <div id="timer"></div>
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let timerInterval;
+      let timerRunning = false;
+      let seconds = 0;
+
+      function startTimer() {
+        if (!timerRunning) {
+          timerInterval = setInterval(updateTimer, 1000);
+          timerRunning = true;
+        }
+      }
+
+      function pauseTimer() {
+        clearInterval(timerInterval);
+        timerRunning = false;
+      }
+
+      function resetTimer() {
+        clearInterval(timerInterval);
+        timerRunning = false;
+        seconds = 0;
+        updateTimerDisplay();
+      }
+
+      function updateTimer() {
+        seconds++;
+        updateTimerDisplay();
+      }
+
+      function updateTimerDisplay() {
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+
+        document.getElementById('timer').textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(secs)}`;
+      }
+
+      function formatTime(time) {
+        return time < 10 ? `0${time}` : time;
+      }
+
+      document.getElementById('start').addEventListener('click', startTimer);
+      document.getElementById('pause').addEventListener('click', pauseTimer);
+      document.getElementById('reset').addEventListener('click', resetTimer);
+    });
+  </script>
+</body>
+</html>
