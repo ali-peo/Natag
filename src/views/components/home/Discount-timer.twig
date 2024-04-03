@@ -4,64 +4,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salla Time Counter</title>
-  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
   <div class="timer-container">
     <h2>Time Counter</h2>
-    <div id="timer"></div>
-    <button id="start">Start</button>
-    <button id="pause">Pause</button>
-    <button id="reset">Reset</button>
+    <span id="days"></span>
+<span id="hours"></span>
+<span id="minutes"></span>
+<span id="seconds"></span>
   </div>
 
+
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      let timerInterval;
-      let timerRunning = false;
-      let seconds = 0;
+  // Set the target date and time (e.g., event date)
+  {% for banner in component.Discount-timer %}
+  const targetDate = new date( {{banner.date_time}});
+  
 
-      function startTimer() {
-        if (!timerRunning) {
-          timerInterval = setInterval(updateTimer, 1000);
-          timerRunning = true;
-        }
-      }
 
-      function pauseTimer() {
-        clearInterval(timerInterval);
-        timerRunning = false;
-      }
+// Create a function to calculate the remaining time
+function calculateRemainingTime() {
+    const now = new Date();
+    console.log(now,"bbb");
+    const timeDifference = targetDate - now;
 
-      function resetTimer() {
-        clearInterval(timerInterval);
-        timerRunning = false;
-        seconds = 0;
-        updateTimerDisplay();
-      }
+    if (timeDifference > 0) {
+        const seconds = Math.floor((timeDifference / 1000) % 60);
+        const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
+        const hours = Math.floor((timeDifference / 1000 / 60 / 60) % 24);
+        const days = Math.floor(timeDifference / 1000 / 60 / 60 / 24);
 
-      function updateTimer() {
-        seconds++;
-        updateTimerDisplay();
-      }
+        return { days, hours, minutes, seconds };
+    } else {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+}
 
-      function updateTimerDisplay() {
-        const hours = Math.floor(seconds / 3600);
-        const minutes = Math.floor((seconds % 3600) / 60);
-        const secs = seconds % 60;
+// Update the countdown display
+function updateCountdownDisplay() {
+    const countdown = calculateRemainingTime();
+    document.getElementById('days').textContent = countdown.days;
+    document.getElementById('hours').textContent = countdown.hours;
+    document.getElementById('minutes').textContent = countdown.minutes;
+    document.getElementById('seconds').textContent = countdown.seconds;
+}
 
-        document.getElementById('timer').textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(secs)}`;
-      }
-
-      function formatTime(time) {
-        return time < 10 ? `0${time}` : time;
-      }
-
-      document.getElementById('start').addEventListener('click', startTimer);
-      document.getElementById('pause').addEventListener('click', pauseTimer);
-      document.getElementById('reset').addEventListener('click', resetTimer);
-    });
+// Call the updateCountdownDisplay function periodically (e.g., every second)
+setInterval(updateCountdownDisplay, 1000);
+{%endfor%}
   </script>
 </body>
 </html>
