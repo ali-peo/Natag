@@ -813,31 +813,16 @@
             "path": "home.Discount-timer",
             "fields": [
                 {
-                    "id": "data_time",
-                    "type": "collection",
-                    "format": "collection",
-                    "label": "data_time",
+                    "id": "data_time.date_time_1",
+                    "type": "string",
+                    "format": "datetime",
+                    "inputType": "datetime-local",
+                    "label": "DateTime",
                     "description": null,
                     "labelHTML": null,
-                    "item_label": null,
-                    "icon": "sicon-list-add",
-                    "fields": [
-                        {
-                            "id": "data_time.date_time_1",
-                            "type": "string",
-                            "format": "datetime",
-                            "inputType": "datetime-local",
-                            "label": "data_time.DateTime",
-                            "description": null,
-                            "labelHTML": null,
-                            "icon": "sicon-calendar-time",
-                            "value": "2024-12-31T15:23",
-                            "required": true
-                        }
-                    ],
-                    "value": [],
-                    "minLength": 1,
-                    "maxLength": "1"
+                    "icon": "sicon-calendar-time",
+                    "value": "2024-12-31T15:23",
+                    "required": true
                 }
             ]
         },
