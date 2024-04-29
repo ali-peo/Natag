@@ -831,7 +831,80 @@
             "title": "صفحة هبوط احترافية",
             "icon": "sicon-brush",
             "path": "home.landing-page",
-            "fields": []
+            "fields": [
+                {
+                    "id": "banner_landing",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "banner_landing",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "banner_landing.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "banner_landing.Image",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        },
+                        {
+                            "id": "banner_landing.subtitle.banner_landing",
+                            "type": "string",
+                            "format": "text",
+                            "label": "Subtitle.banner_landing",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Placeholder text ..",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "banner_landing.string",
+                            "type": "string",
+                            "format": "text",
+                            "label": "String",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Placeholder text ..",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "banner_landing.url",
+                            "type": "string",
+                            "format": "url",
+                            "inputType": "url",
+                            "label": "banner_landing.URL",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://salla.sa",
+                            "icon": "sicon-link",
+                            "value": null,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": "1"
+                }
+            ]
         },
         {
             "key": "b243a888-cc2c-488a-8b03-4d443fe280c6",
