@@ -22,6 +22,11 @@
 {% for discount in component.discount %}
 <h2>{{discount.day_number}}</h2>
 <h2>{{ "discount.time_down"|date("H:i", "Asia/Riyadh")}}</h2>
+
+  {% set dataString = discount.day_number %}
+ 
+<div id="string-example-container" class="string-example-container"
+   data-example-string="{{dataString}}"></div>
 {% endfor %}
 
 
@@ -43,9 +48,11 @@
 
 
   const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 2);
+  targetDate.setDate(targetDate.getDate() + stringExampleData);
 
 
+  var stringExampleData = document.getElementById('string-example-container').getAttribute('data-example-string')
+  console.log("nnnnnnnnnnnnnnnnnnnnnnn",stringExampleData)
 
 
 
