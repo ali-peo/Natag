@@ -7,14 +7,30 @@
 
 </head>
 <body>
-  <div class="timer-container">
+  <div class="container">
     <h2>Time Counter</h2>
-    <span id="days"></span>
-<span id="hours"></span>
-<span id="minutes"></span>
-<span id="seconds"></span>
+<span id="days" class="card_bart"></span>
+<h3 style="display: inline-block">|</h3>
+<span id="hours" class="card_bart"></span>
+<h3 style="display: inline-block">:</h3>
+<span id="minutes" class="card_bart"></span>
+<h3 style="display: inline-block">:</h3>
+<span id="seconds" class="card_bart"></span>
   </div>
 
+<h2>{{data_time.date_time_1}}</h2>
+
+<style>
+.card_bart{
+  width:auto;
+  height:auto;
+  background:white;
+  font-size:25px;
+  margin:10px;
+ 
+
+}
+</style>
 
   <script>
   // Set the target date and time (e.g., event date)
@@ -22,7 +38,7 @@
 
 
   const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 1);
+  targetDate.setDate(targetDate.getDate() + 4);
 
 
 
@@ -31,7 +47,7 @@
 // Create a function to calculate the remaining time
 function calculateRemainingTime() {
     const now = new Date();
-    console.log(now,"bbb");
+    
     const timeDifference = targetDate - now;
 
     if (timeDifference > 0) {
@@ -59,5 +75,7 @@ function updateCountdownDisplay() {
 setInterval(updateCountdownDisplay, 1000);
 
   </script>
+
+
 </body>
 </html>
