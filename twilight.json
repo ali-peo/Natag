@@ -813,31 +813,46 @@
             "path": "home.Discount-timer",
             "fields": [
                 {
-                    "id": "day_number",
-                    "type": "number",
-                    "format": "integer",
-                    "inputType": "number",
-                    "label": "Day_Number",
+                    "id": "discount",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "Discount",
                     "description": null,
                     "labelHTML": null,
-                    "placeholder": "Input an integer number between 5 and 50.",
-                    "icon": "sicon-hashtag",
-                    "value": null,
-                    "required": true,
-                    "minimum": 0,
-                    "maximum": 50
-                },
-                {
-                    "id": "time_down",
-                    "type": "string",
-                    "format": "time",
-                    "inputType": "time",
-                    "label": "Time_Down",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-time",
-                    "value": "01:00",
-                    "required": false
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "discount.time_down",
+                            "type": "string",
+                            "format": "time",
+                            "inputType": "time",
+                            "label": "Discount.Time_Down",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-time",
+                            "value": "01:00",
+                            "required": false
+                        },
+                        {
+                            "id": "discount.day_number",
+                            "type": "number",
+                            "format": "integer",
+                            "inputType": "number",
+                            "label": "Discount.Day_Number",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Input an integer number between 5 and 50.",
+                            "icon": "sicon-hashtag",
+                            "value": null,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 50
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": 5
                 }
             ]
         },
