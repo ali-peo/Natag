@@ -813,16 +813,31 @@
             "path": "home.Discount-timer",
             "fields": [
                 {
-                    "id": "data_time.date_time_1",
-                    "type": "string",
-                    "format": "datetime",
-                    "inputType": "datetime-local",
-                    "label": "DateTime",
+                    "id": "day_number",
+                    "type": "number",
+                    "format": "integer",
+                    "inputType": "number",
+                    "label": "Day_Number",
                     "description": null,
                     "labelHTML": null,
-                    "icon": "sicon-calendar-time",
-                    "value": "2024-12-31T15:23",
-                    "required": true
+                    "placeholder": "Input an integer number between 5 and 50.",
+                    "icon": "sicon-hashtag",
+                    "value": null,
+                    "required": true,
+                    "minimum": 0,
+                    "maximum": 50
+                },
+                {
+                    "id": "time_down",
+                    "type": "string",
+                    "format": "time",
+                    "inputType": "time",
+                    "label": "Time_Down",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-time",
+                    "value": "01:00",
+                    "required": false
                 }
             ]
         },
