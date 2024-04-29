@@ -21,7 +21,7 @@
   </div>
 {% for discount in component.discount %}
 <h2>{{discount.day_number}}</h2>
-<h2>{{ discount.date_time|date("m/d/Y H:i", "Asia/Riyadh")}}</h2>
+<h2>{{ "discount.time_down"|date("H:i", "Asia/Riyadh")}}</h2>
 {% endfor %}
 
 
@@ -43,7 +43,7 @@
 
 
   const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 4);
+  targetDate.setDate(targetDate.getDate() + 2);
 
 
 
