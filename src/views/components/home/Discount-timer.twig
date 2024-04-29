@@ -18,10 +18,10 @@
 
   <script>
   // Set the target date and time (e.g., event date)
-
-  //const targetDate = new date( {{date_time_1}});
   {% for time in componet.data_time%}
-<h4>{% time.date_time_1 %}</h4>
+  const targetDate = new date( {{time.date_time_1}});
+
+<h4>{ {time.date_time_1} }</h4>
 {% endfor %}
 
 
