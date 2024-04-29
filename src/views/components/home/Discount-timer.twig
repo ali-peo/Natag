@@ -17,9 +17,10 @@
 <h3 style="display: inline-block">:</h3>
 <span id="seconds" class="card_bart"></span>
   </div>
-
-<h2>{{home.Discount-timer.day_number}}</h2>
-<h2>{{home.Discount-timer.time_down}}</h2>
+{% for time in component.discount%}
+<h2>{{time.day_number}}</h2>
+<h2>{{time.time_down}}</h2>
+  {%endfor%}
 <style>
 .card_bart{
   width:auto;
