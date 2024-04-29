@@ -19,12 +19,12 @@
   <script>
   // Set the target date and time (e.g., event date)
 
-  const targetDate = new date( {{data_time.date_time_1}});
 
-  var tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
 
-<h4>{ {data_time.date_time_1} }</h4>
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 1);
+
+
 
 
 
@@ -32,7 +32,7 @@
 function calculateRemainingTime() {
     const now = new Date();
     console.log(now,"bbb");
-    const timeDifference = tomorrow - now;
+    const timeDifference = targetDate - now;
 
     if (timeDifference > 0) {
         const seconds = Math.floor((timeDifference / 1000) % 60);
