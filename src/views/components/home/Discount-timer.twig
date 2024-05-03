@@ -1,6 +1,100 @@
-<salla-count-down
-  color="#baf2e5"
-  boxed=true
-  digits="en"
-  size="md">
+{# count_time.twig #}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <div class="container">
+    <h2>Time Counter</h2>
+<span id="days" class="card_bart"></span>
+<h3 style="display: inline-block">|</h3>
+<span id="hours" class="card_bart"></span>
+<h3 style="display: inline-block">:</h3>
+<span id="minutes" class="card_bart"></span>
+<h3 style="display: inline-block">:</h3>
+<span id="seconds" class="card_bart"></span>
+  </div>
+
+
+  
+  <salla-count-down color="#00000" boxed="true" digits="en" size="md" Labeled="true">
+{% for discount in component.discount %}
+
+<h2>{{discount.date_time}}</h2>
+
 </salla-count-down>
+</h2>
+
+
+ 
+<div id="string-example-container" class="string-example-container"
+   data-example-string="{{discount.day_number}}"></div>
+{% endfor %}
+
+
+<style>
+.card_bart{
+  width:auto;
+  height:auto;
+  background:white;
+  font-size:25px;
+  margin:10px;
+ 
+
+}
+</style>
+
+  <script>
+  // Set the target date and time (e.g., event date)
+
+
+
+  const targetDate = new Date();
+  const stringExampleData = document.getElementById('string-example-container').getAttribute('data-example-string');
+  const day = Math.floor(stringExampleData);
+  targetDate.setDate(targetDate.getDate() + day);
+  
+
+
+
+
+// Create a function to calculate the remaining time
+function calculateRemainingTime() {
+    const now = new Date();
+    
+    const timeDifference = targetDate - now;
+
+    if (timeDifference > 0) {
+        const seconds = Math.floor((timeDifference / 1000) % 60);
+        const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
+        const hours = Math.floor((timeDifference / 1000 / 60 / 60) % 24);
+        const days = Math.floor(timeDifference / 1000 / 60 / 60 / 24);
+
+        return { days, hours, minutes, seconds };
+    } else {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+}
+
+// Update the countdown display
+function updateCountdownDisplay() {
+    const countdown = calculateRemainingTime();
+    document.getElementById('days').textContent = countdown.days;
+    document.getElementById('hours').textContent = countdown.hours;
+    document.getElementById('minutes').textContent = countdown.minutes;
+    document.getElementById('seconds').textContent = countdown.seconds;
+}
+
+// Call the updateCountdownDisplay function periodically (e.g., every second)
+setInterval(updateCountdownDisplay, 1000);
+
+  </script>
+
+
+</body>
+</html>
