@@ -813,58 +813,16 @@
             "path": "home.Discount-timer",
             "fields": [
                 {
-                    "id": "discount",
-                    "type": "collection",
-                    "format": "collection",
-                    "label": "Discount",
+                    "id": "date",
+                    "type": "string",
+                    "format": "date",
+                    "inputType": "date",
+                    "label": "Date",
                     "description": null,
                     "labelHTML": null,
-                    "item_label": null,
-                    "icon": "sicon-list-add",
-                    "fields": [
-                        {
-                            "id": "discount.time_down",
-                            "type": "string",
-                            "format": "time",
-                            "inputType": "time",
-                            "label": "Discount.Time_Down",
-                            "description": null,
-                            "labelHTML": null,
-                            "icon": "sicon-time",
-                            "value": "01:00",
-                            "required": false
-                        },
-                        {
-                            "id": "discount.day_number",
-                            "type": "number",
-                            "format": "integer",
-                            "inputType": "number",
-                            "label": "Discount.Day_Number",
-                            "description": null,
-                            "labelHTML": null,
-                            "placeholder": "Input an integer number between 5 and 50.",
-                            "icon": "sicon-hashtag",
-                            "value": null,
-                            "required": true,
-                            "minimum": 0,
-                            "maximum": 50
-                        },
-                        {
-                            "id": "discount.date_time",
-                            "type": "string",
-                            "format": "datetime",
-                            "inputType": "datetime-local",
-                            "label": "Discount.Date_Time",
-                            "description": null,
-                            "labelHTML": null,
-                            "icon": "sicon-calendar-time",
-                            "value": "2025-12-01T01:00",
-                            "required": false
-                        }
-                    ],
-                    "value": [],
-                    "minLength": 1,
-                    "maxLength": 5
+                    "icon": "sicon-calendar-date",
+                    "value": "2020-10-01",
+                    "required": true
                 }
             ]
         },
