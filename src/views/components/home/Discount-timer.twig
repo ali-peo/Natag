@@ -1,18 +1,15 @@
 {# count_time.twig #}
+<div class="countdown">
+{% set c = component  %}
+    <p>Countdown to {{ c.date }}:</p>
+  <salla-count-down color="#00000" boxed="true" digits="en" size="md" labeled="true" date="{{c.date}}">
 
-
-  <salla-count-down color="#00000" boxed="true" digits="en" size="md" labeled="true">
-
-<div class="container">
-{{date}}
-</div>
-</h2>
 </salla-count-down>
-{% endfor %}
+</div>
 
 
 <style>
-.card_bart{
+.countdown{
   width:auto;
   height:auto;
   background:white;
